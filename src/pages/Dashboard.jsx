@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download } from 'lucide-react';
 import Typewriter from '../components/Typewriter';
-import { personalInfo } from '../data';
+import { personalInfo, aboutData, projectsData, achievementsData } from '../data';
+
 
 const Dashboard = () => {
   return (
@@ -64,16 +65,16 @@ const Dashboard = () => {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           <div className="p-6 bg-white dark:bg-white/5 shadow-md rounded-2xl border border-slate-200 dark:border-white/10">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">5+</h3>
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{projectsData.length}+</h3>
             <p className="text-slate-600 dark:text-gray-400">Projects Completed</p>
           </div>
           <div className="p-6 bg-white dark:bg-white/5 shadow-md rounded-2xl border border-slate-200 dark:border-white/10">
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">8.80</h3>
-            <p className="text-slate-600 dark:text-gray-400">CGPA</p>
+            <p className="text-slate-600 dark:text-gray-400">{aboutData.education.cgpa}</p>
           </div>
           <div className="p-6 bg-white dark:bg-white/5 shadow-md rounded-2xl border border-slate-200 dark:border-white/10">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">5+</h3>
-            <p className="text-slate-600 dark:text-gray-400">Certifications</p>
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{achievementsData.certifications.length + achievementsData.academicCredentials.length + achievementsData.extraCurricular.length + achievementsData.participation.length}+</h3>
+            <p className="text-slate-600 dark:text-gray-400">Achievements</p>
           </div>
         </motion.div>
       </div>

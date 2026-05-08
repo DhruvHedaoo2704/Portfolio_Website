@@ -1,3 +1,5 @@
+import { image, title } from "framer-motion/client";
+
 // Portfolio data for Dhruv Hedaoo
 export const personalInfo = {
   name: "Dhruv Hedaoo",
@@ -420,54 +422,211 @@ export const projectsData = [
 ];
 
 export const achievementsData = {
-  competitive: [
-    {
-      title: "Winner - Inter-University Hackathon 2024",
-      organization: "IIT Delhi",
-      description: "First place in sustainable technology track with EcoTrack application"
-    },
-    {
-      title: "Google Code-in Finalist",
-      organization: "Google",
-      description: "Selected among top 50 participants globally for open-source contributions"
-    },
-    {
-      title: "ACM ICPC Regionalist",
-      organization: "ACM",
-      description: "Qualified for regional level in ACM International Collegiate Programming Contest"
-    },
-    {
-      title: "Coding Ninjas Campus Ambassador",
-      organization: "Coding Ninjas",
-      description: "Promoted coding culture and organized workshops at university level"
-    }
-  ],
+  // Note: All sections support both image files (jpg, png, gif, webp, bmp) and PDF files
+  // Example: imageUrl: "/certifications/cert.pdf" or imageUrl: "/certifications/cert.png"
   certifications: [
     {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2025"
+      title: "AWS Certified Cloud Practitioner",
+      issuer: "Intellipaat",
+      date: "2025",
+      imageUrl: "/certifications/aws-certified-cloud-practitioner.png"
     },
     {
-      title: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      date: "2025"
+      title: "Google Coursera Bits & Bytes of Computer Systems",
+      issuer: "Google Essentials",
+      date: "2025",
+      imageUrl: "/certifications/google-coursera-bits-bytes.png"
     },
     {
-      title: "Meta Front-End Developer Professional",
-      issuer: "Meta",
-      date: "2023"
+      title: "Foundation of AIML",
+      issuer: "Vityarathi",
+      date: "2023",
+      imageUrl: "/certifications/foundation-aiml.png"
     },
     {
-      title: "Machine Learning Specialization",
-      issuer: "Stanford University (Coursera)",
-      date: "2023"
+      title: "JAVA Programming",
+      issuer: "Vityarthi",
+      date: "2025",
+      imageUrl: "/certifications/java-programming.pdf"
     },
     {
       title: "Android Developer",
       issuer: "Imarticus Learning",
-      date: "2025"
+      date: "2025",
+      imageUrl: "/certifications/android-developer.png"
+    },
+    {
+      title: "Python Programming",
+      issuer: "Vityarthi",
+      date: "2025",
+      imageUrl: "/certifications/python-programming.png"
+    },
+    {
+      title: "Decode DSA with C++",
+      issuer: "Physics Wallah",
+      date: "2025",
+      imageUrl: "/certifications/decode-dsa-cpp.png"
+    },
+    {
+      title: "Parikshak.ai",
+      organization: "Parikshak.ai",
+      description: "Selected as a Campus Ambassador for Parikshak.ai, promoting their AI-powered technical assessment platform and driving student engagement on campus",
+      imageUrl: "/certifications/parikshak-ambassador.png"
     }
+  ],
+  academicCredentials: [
+     {
+      title: "GATE Computer Science 2026 Qualified",
+      issuer: "IIT Guwahati",
+      date: "2026",
+      imageUrl: ["/certifications/gate-computer-science1.png", "/certifications/gate-computer-science.png"]  
+    },
+    
+    {
+      title: "GATE DATA SCIENCE 2026",
+      issuer: "IIT Guwahati",
+      date: "2026",
+      imageUrl: "/certifications/gate-data-science.png"
+    },
+    {
+      title: "12th Board 70%",
+      issuer: "CBSE",
+      date: "2022",
+      imageUrl: "/certifications/12th-board.pdf"
+    },
+    {
+      title: "10th Board 81.6%",
+      issuer: "CBSE",
+      date: "2020",
+      imageUrl: "/certifications/10th-board.pdf"
+    }
+  ],
+  extraCurricular: [
+    {
+      title: "Internshala Campus Representative",
+      organization: "Internshala",
+      description: "Represented the university in various internships and career development programs",
+      imageUrl: "/certifications/internshala-campus-representative.png"
+    },
+    {
+      title: "Unstop Campus Ambassador",
+      organization: "Unstop",
+      description: "Promoted coding culture and organized workshops at university level",
+      imageUrl: "/certifications/unstop-campus-ambassador.png"  
+    },
+    {
+      title: "Abacus International Player",
+      organization: "Abacus",
+      description: "Participated in the Abacus International competition and secured 11th place, showcasing exceptional problem-solving skills",
+      imageUrl: "/certifications/abacus-international-player.png"
+    },
+    {
+      title: "Abacus National Player",
+      organization: "Abacus",
+      description: "Participated in the Abacus National competition and secured 5th place, showcasing exceptional problem-solving skills",
+      imageUrl: "/certifications/abacus-national-player.png"
+    },
+    {
+      title: "Abacus State Player",
+      organization: "Abacus",
+      description: "Participated in the Abacus State competition and secured 1st place, showcasing exceptional problem-solving skills",
+      imageUrl: "/certifications/abacus-state-player.png"
+    }
+  ],
+  participation: [
+    {
+      title: "NSS Team Lead",
+      organization: "NSS, VIT Bhopal",
+      description: "Led a team of volunteers in various community service initiatives",
+      imageUrl: "/certifications/nss-team-lead.png"
+    },
+    {
+      title: "Floor Representative",
+      organization: "VIT Bhopal Hostel",
+      description: "Represented the floor in various hostel activities and initiatives",
+      imageUrl: "/certifications/floor-representative.jpeg"
+    }
+  ],
+  participation: [
+    {
+      title: "Viksit Bharat Hackathon Finalist",
+      organization: "Viksit Bharat",
+      description: "Qualified as a finalist in the Viksit Bharat Hackathon, demonstrating strong coding skills and problem-solving abilities",
+      imageUrl: "/certifications/viksit-bharat-hackathon-finalist.jpg"
+    },
+    {
+      title: "Code 2 Carreer",
+      organization: "Code 2 Carreer",
+      description: "Qualified for the Code 2 Carreer competition for the placement ready test, showcasing readiness for industry placements",
+      imageUrl: "/certifications/code-2-career.png"
+    },
+    {
+      title: "National Finance Literacy Challenge",
+      organization: "National Institute of Securities Markets (NISM)",
+      description: "Qualified for the National Finance Literacy Challenge, demonstrating strong financial literacy and analytical skills",
+      imageUrl: "/certifications/national-finance-literacy-challenge.png"
+    },
+    {
+      title: "Build for Botanicals Hackathon",
+      organization: "Swan Botanicals",
+      description: "Participated in the Build for Botanicals Hackathon, creating an AI-powered skincare recommendation system and showcasing innovative problem-solving skills",
+      imageUrl: "/certifications/build-for-botanicals-hackathon.png"
+    },
+    {
+      title: "National Level Online Coding Competition",
+      organization: "RV University, Bangalore",
+      description: "Participated in a national level online coding competition hosted by RV University, demonstrating strong coding skills and competitive spirit",
+      imageUrl: "/certifications/national-level-online-coding-competition.png"
+    },
+    {
+      title: "Build Folio Hackathon",
+      organization: "Manipal University Jaipur",
+      description: "Participated in the Build Folio Hackathon, creating a portfolio website and showcasing web development skills",
+      imageUrl: "/certifications/build-folio-hackathon.png"
+    },
+    {
+      title: "Elite Hack 1.0",
+      organization: "Elite Coders",
+      description: "Participated in the Elite Hack 1.0 hackathon, a global online hackathon that brought together 7500+ participants and 900+ teams.",
+      imageUrl: "/certifications/elite-hack-1.0.jpg"
+    },
+    {
+      title: "The Tech hackathon",
+      organization: "Indian Institue of Forest Management, Bhopal",
+      description: "Participated in The Tech hackathon, a national level hackathon organized by the Indian Institute of Forest Management (IIFM), Bhopal.",
+      imageUrl: "/certifications/the-tech-hackathon.jpg"
+    },
+    {
+      title: "Parivartan TBRS 2025",
+      organization: "Indian Institute of Management Ahmedabad",
+      description: "Participated in the Parivartan TBRS 2025, a national level hackathon organized by the Indian Institute of Management Ahmedabad.",
+      imageUrl: "/certifications/parivartan-tbrs-2025.jpg"
+    },
+    {
+      title: "Tata Crucible Campus Quiz",
+      organization: "TATA Group",
+      description: "Participated in the Tata Crucible Campus Quiz, a prestigious quiz competition organized by the Tata Group.",
+      imageUrl: "/certifications/tata-crucible-campus-quiz.jpg"
+    },
+    {
+      title: "National Level E-Quiz",
+      organization: "Chaitanya Bharathi Institute of Technology, Hyderabad",
+      description: "Participated in a national level E-Quiz organized by Chaitanya Bharathi Institute of Technology, Hyderabad.",
+      imageUrl: "/certifications/national-level-e-quiz.jpg"
+    },
+    {
+      title: "Quantum Computing Hackathon",
+      organization: "Indian Institute of Information Technology, Nagpur",
+      description: "Participated in the Quantum Computing Hackathon, a national level hackathon organized by the Indian Institute of Information Technology, Nagpur.",
+      imageUrl: "/certifications/quantum-computing-hackathon.jpg"
+    },
+    {
+      title: "NationBuilding Case Study Competition 2025",
+      organization: "Indian Institute of Management Ahmedabad",
+      description: "Participated in the NationBuilding Case Study Competition 2025, a national level case study competition organized by the Indian Institute of Management Ahmedabad.",
+      imageUrl: "/certifications/nationbuilding-case-study-competition-2025.jpg"
+    }
+    
   ]
 };
 
@@ -479,10 +638,10 @@ export const chatbotData = {
       "Welcome! Ask me anything about Dhruv's background and achievements."
     ],
     skills: "Dhruv is proficient in multiple programming languages including Java, Python, and JavaScript. He specializes in full-stack development, Android development, and AI/ML technologies. His tech stack includes React.js, Node.js, Flutter, TensorFlow, and various databases.",
-    experience: "Dhruv has worked as a Software Development Intern at Tech Solutions Pvt Ltd, where he improved application prformance by 30%. He's also serving as Technical Team Lead at VIT Bhopal Coding Club, leading a team of 15+ developers.",
-    education: `Dhruv is pursuing B.Tech in Computer Science Engineering at VIT Bhopal University (2022-2026) with a ${aboutData.education.cgpa} of 8.80. His coursework includes Data Structures, Machine Learning, and Mobile App Development.`,
-    projects: "Dhruv has developed several impressive projects including EcoTrack (environmental monitoring app), TaskFlow (project management platform), SmartFinance (AI-powered finance tracker), and CodeCollab (real-time code editor).",
-    achievements: "Dhruv has won the Inter-University Hackathon 2024, qualified as Google Code-in Finalist, and holds multiple certifications from AWS, Google Cloud, and Meta. He's also an ACM ICPC Regionalist.",
+    experience: "Dhruv has interned as a Full Stack Developer at Orangebits Digital Solutions and as an Android Developer at Imarticus Learning. He has also worked on personal projects like 'LifeLink - Real-Time Blood Donation' and",
+    education: `Dhruv is pursuing B.Tech in Computer Science Engineering at VIT Bhopal University (2022-2026) with a ${aboutData.education.cgpa}. His coursework includes Data Structures, Machine Learning, and Mobile App Development.`,
+    projects: "Dhruv has developed several projects, including 'LifeLink - Real-Time Blood Donation,' a web app connecting blood donors and recipients",
+    achievements: "Dhruv has earned certifications like AWS Certified Cloud Practitioner and Google Coursera Bits & Bytes of Computer Systems. He has also been recognized as a finalist in the Viksit Bharat Hackathon and a Campus Ambassador for Internshala and Unstop.",
     contact: `You can reach Dhruv at ${personalInfo.email} or connect with him on LinkedIn and GitHub. Check out his social links in the contact section!`,
     default: "I'm not sure about that specific question. You can ask me about Dhruv's skills, experience, education, projects, achievements, or contact information. What would you like to know?"
   }
