@@ -7,13 +7,14 @@ import { personalInfo, aboutData, projectsData, skillsData, experienceData, achi
 
 const Dashboard = () => {
   const [expandedExperience, setExpandedExperience] = useState(null);
-  const [visibleCount, setVisibleCount] = useState(5);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   // Calculate experience stats
   const totalExperiences = experienceData.length;
   const leadershipRoles = experienceData.filter(exp => exp.type === 'Leadership').length;
   const technicalRoles = experienceData.filter(exp => exp.type === 'Experience').length;
   const totalAchievements = Object.values(achievementsData).reduce((total, category) => total + (Array.isArray(category) ? category.length : 0), 0);
+  const allSkills = Array.from(new Set(Object.values(skillsData).flatMap(category => category.map(skill => skill.name))));
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +33,7 @@ const Dashboard = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900"
+      className="min-h-screen pt-16 sm:pt-0"
     >
       {/* Hero Section */}
       <div className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -108,7 +109,7 @@ const Dashboard = () => {
       </div>
 
       {/* Technical Skills Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-white/5">
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -187,8 +188,8 @@ const Dashboard = () => {
               </p>
 
               {/* Career at a Glance */}
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 dark:from-slate-800 dark:to-slate-900 p-8 rounded-xl border border-slate-700 dark:border-slate-700">
-                <h3 className="text-xl font-bold text-white mb-6">Career at a Glance</h3>
+              <div className="bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-6">Career at a Glance</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-blue-500/20 rounded-lg">
@@ -197,8 +198,8 @@ const Dashboard = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">4+</p>
-                      <p className="text-sm text-slate-400">Years Exp.</p>
+                      <p className="text-2xl font-bold text-slate-800 dark:text-white">{aboutData.education.cgpa}</p>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">CGPA</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -208,8 +209,20 @@ const Dashboard = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">{totalExperiences}+</p>
-                      <p className="text-sm text-slate-400">Projects</p>
+                      <p className="text-2xl font-bold text-slate-800 dark:text-white">{projectsData.length}</p>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">Projects</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 bg-amber-500/20 rounded-lg">
+                      <svg className="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-slate-800 dark:text-white">{totalAchievements}</p>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">Achievements</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -219,24 +232,25 @@ const Dashboard = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">10+</p>
-                      <p className="text-sm text-slate-400">Technologies</p>
+                      <p className="text-2xl font-bold text-slate-800 dark:text-white"> 10+</p>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">Technologies</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="p-3 bg-amber-500/20 rounded-lg">
-                      <svg className="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-white">8.8</p>
-                      <p className="text-sm text-slate-400">CGPA</p>
-                    </div>
+                  
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+                  <h4 className="text-sm font-semibold text-slate-800 dark:text-white mb-4">Core Technologies</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {allSkills.map((tech, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-slate-100 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-md border border-slate-200 dark:border-slate-700 transition-colors hover:bg-slate-200 dark:hover:bg-slate-700">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
-                <p className="text-sm text-slate-400 italic mt-6 pt-6 border-t border-slate-700">
+                <p className="text-sm text-slate-500 dark:text-slate-400 italic mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
                   "Building resilience through code, and scalability through architecture."
                 </p>
               </div>
@@ -268,18 +282,18 @@ const Dashboard = () => {
                       </div>
 
                       <div
-                        className="w-full bg-gradient-to-br from-slate-800 to-slate-900 dark:from-slate-800 dark:to-slate-900 border border-slate-700 dark:border-slate-700 rounded-xl p-6 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 group cursor-default"
+                        className="w-full bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-6 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 group cursor-default shadow-sm"
                       >
                         <div className="flex items-start justify-between mb-2">
                           <div className="flex-1">
-                            <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{exp.title}</h3>
-                            <p className="text-slate-400 font-medium">{exp.company}</p>
+                            <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{exp.title}</h3>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium">{exp.company}</p>
                           </div>
-                          <span className="text-blue-400 font-semibold whitespace-nowrap ml-4">{exp.duration}</span>
+                          <span className="text-blue-600 dark:text-blue-400 font-semibold whitespace-nowrap ml-4">{exp.duration}</span>
                         </div>
 
                         {expandedExperience !== idx && exp.description && (
-                          <p className="text-sm text-slate-400 mt-2 line-clamp-2">{exp.description}</p>
+                          <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-2">{exp.description}</p>
                         )}
 
                         <motion.div
@@ -289,14 +303,14 @@ const Dashboard = () => {
                           className="overflow-hidden"
                         >
                           {expandedExperience === idx && (
-                            <div className="mt-4 pt-4 border-t border-slate-700">
-                              <p className="text-slate-300 mb-4">{exp.description}</p>
+                            <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+                              <p className="text-slate-600 dark:text-slate-300 mb-4">{exp.description}</p>
                               <div>
-                                <h4 className="text-sm font-semibold text-white mb-3">Key Achievements:</h4>
+                                <h4 className="text-sm font-semibold text-slate-800 dark:text-white mb-3">Key Achievements:</h4>
                                 <ul className="space-y-2">
                                   {exp.achievements.map((achievement, aidx) => (
-                                    <li key={aidx} className="flex items-start text-sm text-slate-400">
-                                      <span className="text-blue-400 mr-2 flex-shrink-0">•</span>
+                                    <li key={aidx} className="flex items-start text-sm text-slate-600 dark:text-slate-400">
+                                      <span className="text-blue-600 dark:text-blue-400 mr-2 flex-shrink-0">•</span>
                                       <span>{achievement}</span>
                                     </li>
                                   ))}
@@ -319,7 +333,7 @@ const Dashboard = () => {
                     className="mt-8 flex justify-center lg:justify-end"
                   >
                     <button
-                      onClick={() => setVisibleCount(prev => Math.min(prev + 5, totalExperiences))}
+                      onClick={() => setVisibleCount(prev => Math.min(prev + 6, totalExperiences))}
                       className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/50"
                     >
                       Show More
@@ -328,7 +342,7 @@ const Dashboard = () => {
                   </motion.div>
                 )}
 
-                {visibleCount > 5 && (
+                {visibleCount > 6 && (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -336,7 +350,7 @@ const Dashboard = () => {
                     className="mt-4 flex justify-center lg:justify-end"
                   >
                     <button
-                      onClick={() => setVisibleCount(5)}
+                      onClick={() => setVisibleCount(6)}
                       className="text-slate-400 hover:text-slate-300 font-medium text-sm transition-colors"
                     >
                       Show Less
@@ -350,7 +364,7 @@ const Dashboard = () => {
       </div>
 
       {/* Awards & Recognitions Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-white/5">
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
