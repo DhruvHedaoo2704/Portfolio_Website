@@ -6,13 +6,13 @@ export const personalInfo = {
   animatedTitles: [
     "Full-Stack Developer",
     "Android Developer", 
-    "AI & ML Enthusiast",
+    "AI & ML Enthusiast", 
     "Problem Solver"
   ],
   intro: "A dedicated Computer Science undergraduate at VIT Bhopal with a passion for creating innovative solutions and pushing technological boundaries.",
   email: "dhruv.hedaoo@gmail.com",
   socialLinks: {
-    linkedin: "https://linkedin.com/in/dhruvhedaoo",
+    linkedin: "https://www.linkedin.com/in/dhruv-hedaoo-315410299/",
     github: "https://github.com/DhruvHedaoo2704"
   }
 };
