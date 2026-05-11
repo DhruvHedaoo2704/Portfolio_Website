@@ -32,7 +32,7 @@ const Dashboard = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900"
+      className="min-h-screen flex items-center justify-center px-4"
     >
       {/* Hero Section */}
       <div className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
