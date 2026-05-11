@@ -73,6 +73,30 @@ const DataStream = ({ active }) => {
   );
 }
 
+// Zone 4: Floating Cubes (Mobile Developer)
+const FloatingCubes = ({ active }) => {
+  const ref = useRef();
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    if (ref.current) {
+      ref.current.rotation.x = t * 0.15;
+      ref.current.rotation.y = t * 0.2;
+      ref.current.scale.setScalar(THREE.MathUtils.lerp(ref.current.scale.x, active ? 1 : 0, 0.1));
+    }
+  });
+
+  return (
+    <group ref={ref} scale={[0, 0, 0]}>
+      {[-2, 0, 2].map((x, i) => (
+        <mesh key={i} position={[x, Math.sin(x), Math.cos(x)]} rotation={[x, x, x]}>
+          <boxGeometry args={[0.8, 0.8, 0.8]} />
+          <meshStandardMaterial wireframe color="#10b981" emissive="#10b981" emissiveIntensity={0.6} transparent opacity={active ? 0.4 : 0} />
+        </mesh>
+      ))}
+    </group>
+  );
+};
+
 export const BackgroundEngine = ({ currentZone }) => {
   return (
     <div className="absolute inset-0 -z-10 bg-slate-50 dark:bg-[#0f172a] transition-colors duration-1000 overflow-hidden">
@@ -80,7 +104,8 @@ export const BackgroundEngine = ({ currentZone }) => {
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         
-        <ParticleGrid active={currentZone === 'Developer'} />
+        <ParticleGrid active={currentZone === 'Web'} />
+        <FloatingCubes active={currentZone === 'Mobile'} />
         <NeuralMesh active={currentZone === 'AI'} />
         <DataStream active={currentZone === 'Software'} />
         
