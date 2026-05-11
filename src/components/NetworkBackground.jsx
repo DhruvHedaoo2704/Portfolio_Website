@@ -17,7 +17,7 @@ const NetworkBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
       {/* Light/Dark dynamic gradient backdrop */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-slate-900/50 dark:to-slate-800/50 mix-blend-multiply dark:mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/40 dark:from-slate-900/50 dark:to-slate-800/50 dark:mix-blend-overlay"></div>
       
       {/* Subtle Grid Pattern */}
       <div 

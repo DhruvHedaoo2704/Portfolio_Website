@@ -109,11 +109,7 @@ export const BackgroundEngine = ({ currentZone }) => {
         <NeuralMesh active={currentZone === 'AI'} />
         <DataStream active={currentZone === 'Software'} />
         
-        {/* Subtle blur overlay for the 'tech' feel */}
-        <mesh position={[0, 0, -2]}>
-            <planeGeometry args={[20, 20]} />
-            <meshBasicMaterial color="#0f172a" transparent opacity={0.1} />
-        </mesh>
+        {/* Removed subtle blur overlay that caused a dark square in light mode */}
       </Canvas>
     </div>
   );
