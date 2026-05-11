@@ -368,18 +368,18 @@ export const projectsData = [
     ]
   },
   {
-    title: "Sauda Bot",
-    description: "Please add a description for your Sauda Bot project here. What does it do and what problem does it solve?",
-    techStack: ["Python", "React.js", "MongoDB", "Dialogflow", "Telegram API"], // Example tech stack
-    liveDemo: "#", // Add your live demo link here
-    sourceCode: "#", // Add your GitHub link here
+    title: "SaudaBot",
+    description: "An Agentic AI personal shopping assistant on WhatsApp that bridges the gap in local commerce for towns like Neemuch. It empowers consumers to find the best local prices, join community group-buying deals, and purchase fresh produce directly from farmers, while giving local sellers a digital edge.",
+    techStack: ["Inya.ai (No-Code AI Engine)", "WhatsApp Business API", "Agentic AI Logic", "Cloud Database"], 
+    liveDemo: "#", // Add your WhatsApp Bot link or demo video here
+    sourceCode: "#", // Add your Inya.ai workflow export or GitHub link here
     features: [
-      "Feature 1 of your bot",
-      "Feature 2 of your bot",
-      "Feature 3 of your bot",
-      "Feature 4 of your bot"
+      "Bhav-Taal: Live price discovery across local retail shops to find the best deals instantly.",
+      "Saath-Mein-Deal: AI-coordinated group buying that aggregates community demand to unlock wholesale prices.",
+      "Khet-se-Ghar: A direct farm-to-home pre-order system that ensures freshness and reduces food waste.",
+      "Proactive AI Alerts: Personalized notifications for relevant deals and a smart shopping list planner."
     ]
-  },
+},
   {
     title: "Privacy Sentinel - Synthetic Data Generator",
     description: "An AI-powered pipeline that analyzes sensitive visual documents (PDFs, images) and generates a new, functionally identical synthetic dataset. This mirrors the original data's statistical patterns but contains no real PII, making it safe for analysis and model training[cite: 6, 7].",
@@ -387,10 +387,10 @@ export const projectsData = [
     liveDemo: "#", // Add your live demo link here
     sourceCode: "#", // Add your GitHub link here
     features: [
-      "Layout-aware OCR and Named Entity Recognition (NER) for information extraction [cite: 30, 31]",
-      "Differential Privacy integration for mathematical guarantees of privacy [cite: 34]",
-      "Generative Adversarial Network (GAN) learns the data's statistical distribution [cite: 41]",
-      "Outputs high-fidelity, privacy-safe synthetic data for analysis [cite: 20, 45]"
+      "Layout-aware OCR and Named Entity Recognition (NER) for information extraction ",
+      "Differential Privacy integration for mathematical guarantees of privacy",
+      "Generative Adversarial Network (GAN) learns the data's statistical distribution",
+      "Outputs high-fidelity, privacy-safe synthetic data for analysis"
     ]
   },
   {
@@ -400,10 +400,10 @@ export const projectsData = [
     liveDemo: "#", // Add your live demo link here
     sourceCode: "#", // Add your GitHub link here
     features: [
-      "Evidence toolkit to capture screenshots, chat logs, call records, and receipts [cite: 85]",
-      "Smart categorization for different types of cybercrime (e.g., Scam, Harassment) [cite: 87]",
-      "Timestamps and hashes files (SHA256) to ensure evidence integrity [cite: 90]",
-      "Generates a court-acceptable PDF report for easy submission [cite: 92]"
+      "Evidence toolkit to capture screenshots, chat logs, call records, and receipts.",
+      "Smart categorization for different types of cybercrime (e.g., Scam, Harassment).",
+      "Timestamps and hashes files (SHA256) to ensure evidence integrity.",
+      "Generates a court-acceptable PDF report for easy submission."
     ]
   },
   {
@@ -413,10 +413,10 @@ export const projectsData = [
     liveDemo: "#", // Add your live demo link here
     sourceCode: "#", // Add your GitHub link here
     features: [
-      "Real-time AI face shape detection using a device's webcam [cite: 129]",
-      "Personalized routine curation based on the detected facial geometry [cite: 133]",
-      "Showcases curated product bundles to create a seamless path to purchase [cite: 138]",
-      "Built-in social sharing and lead capture to drive marketing and conversion [cite: 148]"
+      "Real-time AI face shape detection using a device's webcam",
+      "Personalized routine curation based on the detected facial geometry",
+      "Showcases curated product bundles to create a seamless path to purchase",
+      "Built-in social sharing and lead capture to drive marketing and conversion"
     ]
   }
 ];
