@@ -2,16 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { skillsData } from '../data';
 
-const barColors = [
-  'bg-blue-500',
-  'bg-pink-500',
-  'bg-green-500',
-  'bg-yellow-500',
-  'bg-purple-500',
-  'bg-orange-500',
-  'bg-teal-500',
-];
-
 const Skills = () => {
   return (
     <motion.div
@@ -40,24 +30,15 @@ const Skills = () => {
               transition={{ delay: 0.4 + categoryIndex * 0.1 }}
               className="bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-white/10 shadow-sm"
             >
-              <h2 className="text-2xl font-semibold text-slate-800 dark:text-white mb-6">{category}</h2>
-              <div className="space-y-5">
-                {skills.map((skill, skillIndex) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-base font-medium text-slate-700 dark:text-gray-300">{skill.name}</span>
-                      <span className="text-sm font-medium text-slate-700 dark:text-gray-300">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-2.5 dark:bg-gray-700">
-                      <motion.div
-                        className={`${barColors[skillIndex % barColors.length]} h-2.5 rounded-full`}
-                        style={{ width: `${skill.level}%` }}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: 0.8 + (skillIndex * 0.1) }}
-                      />
-                    </div>
-                  </div>
+              <h4 className="text-lg font-medium text-slate-800 dark:text-white mb-4">{category}</h4>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-blue-100 dark:bg-blue-600/20 text-blue-800 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-400/30"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </motion.div>

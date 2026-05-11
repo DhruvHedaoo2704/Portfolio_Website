@@ -99,27 +99,15 @@ const Dashboard = () => {
                   <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
                   {category[0]}
                 </h3>
-                <div className="space-y-3">
-                  {category[1].slice(0, 5).map((skill, skillIdx) => (
-                    <div key={skillIdx}>
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="text-sm font-medium text-slate-700 dark:text-gray-300">{skill.name}</span>
-                        <span className="text-xs text-slate-500 dark:text-gray-500">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1.5, delay: skillIdx * 0.1 }}
-                          viewport={{ once: true }}
-                          className="bg-gradient-to-r from-blue-500 to-purple-600 h-full rounded-full"
-                        />
-                      </div>
-                    </div>
+                <div className="flex flex-wrap gap-2">
+                  {category[1].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-600/20 text-blue-800 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-400/30"
+                    >
+                      {skill}
+                    </span>
                   ))}
-                  {category[1].length > 5 && (
-                    <p className="text-xs text-slate-500 dark:text-gray-400 pt-2">+ {category[1].length - 5} more</p>
-                  )}
                 </div>
               </motion.div>
             ))}

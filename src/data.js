@@ -44,56 +44,56 @@ export const aboutData = {
 
 export const skillsData = {
   "Programming Languages": [
-    { name: "Java", level: 90 },
-    { name: "Python", level: 95 },
-    { name: "JavaScript", level: 88 },
-    { name: "C++", level: 97 },
-    { name: "SQL", level: 85 }
+    "Java",
+    "Python",
+    "JavaScript",
+    "C++",
+    "SQL"
   ],
   "Web Technologies": [
-    { name: "React.js", level: 92 },
-    { name: "Next.js", level: 82 },
-    { name: "Node.js", level: 85 },
-    { name: "Express.js", level: 88 },
-    { name: "HTML5", level: 95 },
-    { name: "CSS3", level: 93 },
-    { name: "Tailwind CSS", level: 90 }
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS"
   ],
   "AI & ML": [
-    { name: "TensorFlow", level: 85 },
-    { name: "PyTorch", level: 80 },
-    { name: "Scikit-learn", level: 92 },
-    { name: "Pandas", level: 95 },
-    { name: "NumPy", level: 94 },
-    { name: "OpenCV", level: 85 },
-    { name: "Matplotlib", level: 88 },
-    { name: "XGBoost", level: 82 },
-    { name: "Keras", level: 84 },
-    { name: "Seaborn", level: 87 }
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "OpenCV",
+    "Matplotlib",
+    "XGBoost",
+    "Keras",
+    "Seaborn"
   ],
   "Tools & Technologies": [
-    { name: "Git", level: 95 },
-    { name: "GitHub", level: 96 },
-    { name: "AWS", level: 70 },
-    { name: "Figma", level: 85 },
-    { name: "Postman", level: 92 },
-    { name: "VS Code", level: 94 },
-    { name: "Android Studio", level: 90 },
-    { name: "Jupyter Notebook", level: 93 },
-    { name: "Replit", level: 80 },
-    { name: "Colab", level: 88 }
+    "Git",
+    "GitHub",
+    "AWS",
+    "Figma",
+    "Postman",
+    "VS Code",
+    "Android Studio",
+    "Jupyter Notebook",
+    "Replit",
+    "Colab"
   ],
   "Databases": [
-    { name: "MySQL", level: 90 },
-    { name: "PostgreSQL", level: 80 },
-    { name: "MongoDB", level: 85 },
-    { name: "SQLite", level: 88 }
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "SQLite"
   ],
   "Mobile Development": [
-    { name: "Android Studio", level: 90 },
-    { name: "React Native", level: 75 },
-    { name: "Java", level: 88 },
-    { name: "Kotlin", level: 70 }
+    "Android Studio",
+    "React Native",
+    "Java",
+    "Kotlin"
   ]
 };
 
