@@ -262,6 +262,19 @@ export const projectsData = [
     ]
   },
   {
+    title: "To-Do List Website",
+    description: "A clean and simple web-based to-do list application to help users organize their daily tasks efficiently.",
+    techStack: ["React.js", "Local Storage", "CSS3"],
+    liveDemo: " https://dhruvhedaoo2704.github.io/To-Do-TaskFlow/", // Add your live demo link here
+    sourceCode: "https://github.com/DhruvHedaoo2704/To-Do-TaskFlow", // Add your GitHub link here
+    features: [
+      "Add, edit, and delete tasks",
+      "Mark tasks as complete",
+      "Persistent storage using browser's Local Storage",
+      "Filter tasks by all, active, or completed"
+    ]
+  },
+  {
     title: "Data Science Club Website",
     description: "The official website for the university's Data Science Club, featuring events, resources, and membership information.",
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap"],
@@ -352,19 +365,6 @@ export const projectsData = [
       "Student information management",
       "Complaint and maintenance request portal",
       "Automated fee and dues reminders"
-    ]
-  },
-  {
-    title: "To-Do List Website",
-    description: "A clean and simple web-based to-do list application to help users organize their daily tasks efficiently.",
-    techStack: ["React.js", "Local Storage", "CSS3"],
-    liveDemo: "#", // Add your live demo link here
-    sourceCode: "#", // Add your GitHub link here
-    features: [
-      "Add, edit, and delete tasks",
-      "Mark tasks as complete",
-      "Persistent storage using browser's Local Storage",
-      "Filter tasks by all, active, or completed"
     ]
   },
   {
