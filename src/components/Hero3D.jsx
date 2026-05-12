@@ -53,6 +53,19 @@ const getBlurStyles = (index) => {
   return 'bg-amber-500/20';
 };
 
+const getBackgroundGradient = (index) => {
+  const zone = slides[index].id;
+  if (zone === 'Web') {
+    return 'bg-gradient-to-br from-cyan-900/30 via-slate-900 to-slate-950';
+  } else if (zone === 'Mobile') {
+    return 'bg-gradient-to-br from-emerald-900/30 via-slate-900 to-slate-950';
+  } else if (zone === 'AI') {
+    return 'bg-gradient-to-br from-purple-900/30 via-slate-900 to-slate-950';
+  } else {
+    return 'bg-gradient-to-br from-amber-900/30 via-slate-900 to-slate-950';
+  }
+};
+
 export const Hero3D = () => {
   const [index, setIndex] = useState(0);
 
@@ -65,11 +78,44 @@ export const Hero3D = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[90vh] w-full flex flex-col justify-center overflow-hidden pt-20 pb-16">
+    <motion.div
+      animate={{ backgroundImage: undefined }}
+      transition={{ duration: 0.8 }}
+      className={`relative w-full min-h-screen flex flex-col justify-center overflow-hidden ${getBackgroundGradient(index)} transition-all duration-1000`}
+    >
       {/* The Dynamic 3D Background */}
       <BackgroundEngine currentZone={slides[index].id} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+      {/* Animated Glow Orbs */}
+      <motion.div
+        animate={{
+          scale: [1, 1.1, 1],
+          opacity: [0.6, 0.9, 0.6]
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: 'easeInOut'
+        }}
+        className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full transition-colors duration-1000 ${getBlurStyles(index)} transition-colors duration-1000`}
+        style={{ filter: 'blur(10px)' }}
+      />
+      <motion.div
+        animate={{
+          scale: [1.1, 1, 1.1],
+          opacity: [0.6, 0.9, 0.6]
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 0.5
+        }}
+        className={`absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full transition-colors duration-1000 ${getBlurStyles(index)} transition-colors duration-1000`}
+        style={{ filter: 'blur(10px)' }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 pt-20 pb-16">
 
         {/* Left Side Content */}
         <div className="w-full lg:w-3/5 text-center lg:text-left flex flex-col items-center lg:items-start">
@@ -154,7 +200,7 @@ export const Hero3D = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

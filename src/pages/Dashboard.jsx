@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download, ChevronDown } from 'lucide-react';
 import Typewriter from '../components/Typewriter';
+import Hero3D from '../components/Hero3D';
 import { personalInfo, aboutData, projectsData, skillsData, experienceData } from '../data';
 
 const Dashboard = () => {
@@ -33,80 +34,10 @@ const Dashboard = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900"
+      className="min-h-screen relative"
     >
       {/* Hero Section */}
-      <div className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-center mb-12"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-4">
-              Hello,
-            </h1>
-            <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-              I'm {personalInfo.name}
-            </h2>
-            <div className="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-gray-300 mb-6 h-12">
-              <Typewriter words={personalInfo.animatedTitles} speed={100} delay={2000} />
-            </div>
-            <p className="text-lg text-slate-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              {personalInfo.intro}
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
-          >
-            <Link
-              to="/about"
-              className="group inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/50"
-            >
-              Know More
-              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <a
-              href="/resume.pdf"
-              download
-              className="group inline-flex items-center px-8 py-4 bg-white dark:bg-white/10 text-slate-800 dark:text-white hover:bg-slate-100 dark:hover:bg-white/20 font-semibold rounded-full transition-all duration-300 hover:scale-105 border border-slate-300 dark:border-white/20"
-            >
-              Download Resume
-              <Download size={20} className="ml-2 group-hover:translate-y-1 transition-transform" />
-            </a>
-          </motion.div>
-
-          {/* Stats Section */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20"
-          >
-            <motion.div variants={itemVariants} className="bg-white dark:bg-white/5 p-6 rounded-xl border border-slate-200 dark:border-white/10 backdrop-blur">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{yearsExperience}+</div>
-              <p className="text-slate-600 dark:text-gray-400 text-sm">Years Exp.</p>
-            </motion.div>
-            <motion.div variants={itemVariants} className="bg-white dark:bg-white/5 p-6 rounded-xl border border-slate-200 dark:border-white/10 backdrop-blur">
-              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">{projectsData.length}+</div>
-              <p className="text-slate-600 dark:text-gray-400 text-sm">Projects</p>
-            </motion.div>
-            <motion.div variants={itemVariants} className="bg-white dark:bg-white/5 p-6 rounded-xl border border-slate-200 dark:border-white/10 backdrop-blur">
-              <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">{Object.keys(skillsData).length}+</div>
-              <p className="text-slate-600 dark:text-gray-400 text-sm">Skill Categories</p>
-            </motion.div>
-            <motion.div variants={itemVariants} className="bg-white dark:bg-white/5 p-6 rounded-xl border border-slate-200 dark:border-white/10 backdrop-blur">
-              <div className="text-3xl md:text-4xl font-bold text-orange-600 mb-2">{leadershipRoles}+</div>
-              <p className="text-slate-600 dark:text-gray-400 text-sm">Leadership</p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
+      <Hero3D />
 
       {/* Technical Skills Section */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-white/5">
