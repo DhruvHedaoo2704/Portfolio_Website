@@ -438,6 +438,12 @@ export const achievementsData = {
       imageUrl: "/certifications/google-coursera-bits-bytes.png"
     },
     {
+      title: "NPTEL Market Analytics",
+      issuer: "IIT Kharagpur",
+      date: "2026",
+      imageUrl: "/certifications/nptel-market-analytics.png"
+    },
+    {
       title: "Foundation of AIML",
       issuer: "Vityarathi",
       date: "2023",
