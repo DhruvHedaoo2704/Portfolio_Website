@@ -48,8 +48,8 @@ const Projects = () => {
           transition={{ delay: 0.2 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Projects</h1>
-          <p className="text-xl text-gray-400">Building the future, one project at a time</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Projects</h1>
+          <p className="text-xl text-slate-600 dark:text-gray-400">Building the future, one project at a time</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -59,31 +59,31 @@ const Projects = () => {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 + index * 0.1 }}
-              className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
+              className="group bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/10 hover:border-slate-300 dark:hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-600/30 border border-blue-500 text-blue-400 font-bold text-sm">
                     {project.id}
                   </span>
-                  <h3 className="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-2xl font-semibold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
                 </div>
-                <Star size={20} className="text-gray-400 hover:text-yellow-400 transition-colors cursor-pointer" />
+                <Star size={20} className="text-slate-400 dark:text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors cursor-pointer" />
               </div>
 
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-slate-600 dark:text-gray-300 leading-relaxed mb-6">
                 {project.description}
               </p>
 
               {/* Features */}
               <div className="mb-6">
-                <h4 className="text-sm font-medium text-blue-400 mb-3">Key Features:</h4>
+                <h4 className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-3">Key Features:</h4>
                 <ul className="space-y-1">
                   {project.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
-                      <span className="text-blue-400 mr-2">•</span>
+                    <li key={featureIndex} className="text-sm text-slate-600 dark:text-gray-400 flex items-start">
+                      <span className="text-blue-600 dark:text-blue-400 mr-2">•</span>
                       {feature}
                     </li>
                   ))}
@@ -92,12 +92,12 @@ const Projects = () => {
 
               {/* Tech Stack */}
               <div className="mb-6">
-                <h4 className="text-sm font-medium text-blue-400 mb-3">Tech Stack:</h4>
+                <h4 className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-3">Tech Stack:</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-white text-xs font-medium rounded-full border border-blue-400/30"
+                      className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-600/20 dark:to-purple-600/20 text-slate-700 dark:text-white text-xs font-medium rounded-full border border-blue-200 dark:border-blue-400/30"
                     >
                       {tech}
                     </span>
@@ -120,7 +120,7 @@ const Projects = () => {
                   href={project.sourceCode}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg transition-colors border border-white/20"
+                  className="inline-flex items-center px-4 py-2 bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 text-slate-800 dark:text-white font-medium rounded-lg transition-colors border border-slate-300 dark:border-white/20"
                 >
                   <Github size={16} className="mr-2" />
                   Source Code
@@ -137,17 +137,17 @@ const Projects = () => {
           transition={{ delay: 0.8 }}
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-            <h3 className="text-3xl font-bold text-white mb-2">{projectsData.length}</h3>
-            <p className="text-gray-400">Featured Projects</p>
+          <div className="text-center p-8 bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-white/10 shadow-sm">
+            <h3 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">{projectsData.length}</h3>
+            <p className="text-slate-600 dark:text-gray-400">Featured Projects</p>
           </div>
-          <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-            <h3 className="text-3xl font-bold text-white mb-2">1000+</h3>
-            <p className="text-gray-400">Code Commits</p>
+          <div className="text-center p-8 bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-white/10 shadow-sm">
+            <h3 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">1000+</h3>
+            <p className="text-slate-600 dark:text-gray-400">Code Commits</p>
           </div>
-          <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-            <h3 className="text-3xl font-bold text-white mb-2">{loading ? '...' : repoCount-1}+</h3>
-            <p className="text-gray-400">GitHub Repositories</p>
+          <div className="text-center p-8 bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-white/10 shadow-sm">
+            <h3 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">{loading ? '...' : repoCount-1}+</h3>
+            <p className="text-slate-600 dark:text-gray-400">GitHub Repositories</p>
           </div>
         </motion.div>
       </div>

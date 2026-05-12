@@ -87,17 +87,17 @@ const GitHubFeed = () => {
 
   if (loading) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-        <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+      <div className="bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm">
+        <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-4 flex items-center">
           <Calendar className="mr-2" size={20} />
           Recent GitHub Activity
         </h3>
         <div className="space-y-4">
           {[1, 2, 3, 4, 5].map((i) => (
             <div key={i} className="animate-pulse">
-              <div className="h-4 bg-white/20 rounded w-3/4 mb-2"></div>
-              <div className="h-3 bg-white/10 rounded w-full mb-1"></div>
-              <div className="h-3 bg-white/10 rounded w-1/2"></div>
+              <div className="h-4 bg-slate-200 dark:bg-white/20 rounded w-3/4 mb-2"></div>
+              <div className="h-3 bg-slate-100 dark:bg-white/10 rounded w-full mb-1"></div>
+              <div className="h-3 bg-slate-100 dark:bg-white/10 rounded w-1/2"></div>
             </div>
           ))}
         </div>
@@ -107,8 +107,8 @@ const GitHubFeed = () => {
 
   if (error) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-        <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+      <div className="bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm">
+        <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-4 flex items-center">
           <Calendar className="mr-2" size={20} />
           Recent GitHub Activity
         </h3>
@@ -116,20 +116,20 @@ const GitHubFeed = () => {
           <p className="text-red-400 text-sm">
             ⚠️ Unable to fetch GitHub data. Please try again later.
           </p>
-          <p className="text-gray-400 text-xs mt-2">{error}</p>
+          <p className="text-slate-500 dark:text-gray-400 text-xs mt-2">{error}</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 h-full flex flex-col">
+    <div className="bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-white/10 h-full flex flex-col shadow-sm">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-semibold text-white flex items-center">
+        <h3 className="text-xl font-semibold text-slate-800 dark:text-white flex items-center">
           <Calendar className="mr-2" size={20} />
           Recent GitHub Activity
         </h3>
-        <span className="text-xs text-gray-400 bg-white/10 px-2 py-1 rounded">
+        <span className="text-xs text-slate-500 dark:text-gray-400 bg-slate-100 dark:bg-white/10 px-2 py-1 rounded">
           {repos.length} repos
         </span>
       </div>
@@ -160,7 +160,7 @@ const GitHubFeed = () => {
             width: 6px;
           }
           .overflow-y-auto::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
+            background: transparent;
             border-radius: 10px;
           }
           .overflow-y-auto::-webkit-scrollbar-thumb {
@@ -174,17 +174,17 @@ const GitHubFeed = () => {
         `}</style>
         
         {repos.length === 0 ? (
-          <div className="flex items-center justify-center h-32 text-gray-400">
+          <div className="flex items-center justify-center h-32 text-slate-500 dark:text-gray-400">
             <p className="text-sm">No repositories found.</p>
           </div>
         ) : (
           repos.map((repo) => (
             <div 
               key={repo.id} 
-              className="p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition-colors duration-200 cursor-pointer group"
+              className="p-3 bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-100 dark:border-white/5 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors duration-200 cursor-pointer group"
             >
               <div className="flex justify-between items-start mb-2">
-                <h4 className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200 truncate flex-1">
+                <h4 className="text-slate-800 dark:text-white font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 truncate flex-1">
                   <a 
                     href={repo.html_url} 
                     target="_blank" 
@@ -197,28 +197,28 @@ const GitHubFeed = () => {
                 </h4>
               </div>
               
-              <p className="text-gray-400 text-xs mb-2 line-clamp-2">
+              <p className="text-slate-500 dark:text-gray-400 text-xs mb-2 line-clamp-2">
                 {repo.description || 'No description available'}
               </p>
               
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center space-x-3">
                   {repo.language && (
-                    <span className="flex items-center text-gray-400">
+                    <span className="flex items-center text-slate-500 dark:text-gray-400">
                       <div className={`w-2 h-2 rounded-full ${getLanguageColor(repo.language)} mr-1`}></div>
                       {repo.language}
                     </span>
                   )}
-                  <span className="flex items-center text-gray-400">
+                  <span className="flex items-center text-slate-500 dark:text-gray-400">
                     <Star size={10} className="mr-1" />
                     {repo.stargazers_count}
                   </span>
-                  <span className="flex items-center text-gray-400">
+                  <span className="flex items-center text-slate-500 dark:text-gray-400">
                     <GitFork size={10} className="mr-1" />
                     {repo.forks_count}
                   </span>
                 </div>
-                <span className="text-gray-500 text-xs">
+                <span className="text-slate-400 dark:text-gray-500 text-xs">
                   {formatDate(repo.updated_at)}
                 </span>
               </div>
@@ -237,12 +237,12 @@ const GitHubFeed = () => {
       </button>
       
       {/* Footer Link */}
-      <div className="mt-4 pt-4 border-t border-white/10">
+      <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/10">
         <a
           href={`https://github.com/${GITHUB_USERNAME}?tab=repositories`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-400 hover:text-blue-300 text-xs font-medium flex items-center justify-center transition-colors"
+          className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-xs font-medium flex items-center justify-center transition-colors"
         >
           View all repositories <ExternalLink size={12} className="ml-1" />
         </a>

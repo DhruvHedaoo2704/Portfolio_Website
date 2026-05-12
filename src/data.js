@@ -6,13 +6,13 @@ export const personalInfo = {
   animatedTitles: [
     "Full-Stack Developer",
     "Android Developer", 
-    "AI & ML Enthusiast",
+    "AI & ML Enthusiast", 
     "Problem Solver"
   ],
   intro: "A dedicated Computer Science undergraduate at VIT Bhopal with a passion for creating innovative solutions and pushing technological boundaries.",
   email: "dhruv.hedaoo@gmail.com",
   socialLinks: {
-    linkedin: "https://linkedin.com/in/dhruvhedaoo",
+    linkedin: "https://www.linkedin.com/in/dhruv-hedaoo-315410299/",
     github: "https://github.com/DhruvHedaoo2704"
   }
 };
@@ -44,56 +44,56 @@ export const aboutData = {
 
 export const skillsData = {
   "Programming Languages": [
-    { name: "Java", level: 90 },
-    { name: "Python", level: 95 },
-    { name: "JavaScript", level: 88 },
-    { name: "C++", level: 97 },
-    { name: "SQL", level: 85 }
+    "Java",
+    "Python",
+    "JavaScript",
+    "C++",
+    "SQL"
   ],
   "Web Technologies": [
-    { name: "React.js", level: 92 },
-    { name: "Next.js", level: 82 },
-    { name: "Node.js", level: 85 },
-    { name: "Express.js", level: 88 },
-    { name: "HTML5", level: 95 },
-    { name: "CSS3", level: 93 },
-    { name: "Tailwind CSS", level: 90 }
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS"
   ],
   "AI & ML": [
-    { name: "TensorFlow", level: 85 },
-    { name: "PyTorch", level: 80 },
-    { name: "Scikit-learn", level: 92 },
-    { name: "Pandas", level: 95 },
-    { name: "NumPy", level: 94 },
-    { name: "OpenCV", level: 85 },
-    { name: "Matplotlib", level: 88 },
-    { name: "XGBoost", level: 82 },
-    { name: "Keras", level: 84 },
-    { name: "Seaborn", level: 87 }
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "OpenCV",
+    "Matplotlib",
+    "XGBoost",
+    "Keras",
+    "Seaborn"
   ],
   "Tools & Technologies": [
-    { name: "Git", level: 95 },
-    { name: "GitHub", level: 96 },
-    { name: "AWS", level: 70 },
-    { name: "Figma", level: 85 },
-    { name: "Postman", level: 92 },
-    { name: "VS Code", level: 94 },
-    { name: "Android Studio", level: 90 },
-    { name: "Jupyter Notebook", level: 93 },
-    { name: "Replit", level: 80 },
-    { name: "Colab", level: 88 }
+    "Git",
+    "GitHub",
+    "AWS",
+    "Figma",
+    "Postman",
+    "VS Code",
+    "Android Studio",
+    "Jupyter Notebook",
+    "Replit",
+    "Colab"
   ],
   "Databases": [
-    { name: "MySQL", level: 90 },
-    { name: "PostgreSQL", level: 80 },
-    { name: "MongoDB", level: 85 },
-    { name: "SQLite", level: 88 }
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "SQLite"
   ],
   "Mobile Development": [
-    { name: "Android Studio", level: 90 },
-    { name: "React Native", level: 75 },
-    { name: "Java", level: 88 },
-    { name: "Kotlin", level: 70 }
+    "Android Studio",
+    "React Native",
+    "Java",
+    "Kotlin"
   ]
 };
 
@@ -368,18 +368,39 @@ export const projectsData = [
     ]
   },
   {
+<<<<<<< HEAD
     title: "Sauda Bot",
     description: "Please add a description for your Sauda Bot project here. What does it do and what problem does it solve?",
     techStack: ["Python", "React.js", "MongoDB", "Dialogflow", "Telegram API"], // Example tech stack
     liveDemo: "#", // Add your live demo link here
     sourceCode: "#", // Add your GitHub link here
+=======
+    title: "To-Do List Website",
+    description: "A clean and simple web-based to-do list application to help users organize their daily tasks efficiently.",
+    techStack: ["React.js", "Local Storage", "CSS3"],
+    liveDemo: "#", // Add your live demo link here
+    sourceCode: "#", // Add your GitHub link here
     features: [
-      "Feature 1 of your bot",
-      "Feature 2 of your bot",
-      "Feature 3 of your bot",
-      "Feature 4 of your bot"
+      "Add, edit, and delete tasks",
+      "Mark tasks as complete",
+      "Persistent storage using browser's Local Storage",
+      "Filter tasks by all, active, or completed"
     ]
   },
+  {
+    title: "SaudaBot",
+    description: "An Agentic AI personal shopping assistant on WhatsApp that bridges the gap in local commerce for towns like Neemuch. It empowers consumers to find the best local prices, join community group-buying deals, and purchase fresh produce directly from farmers, while giving local sellers a digital edge.",
+    techStack: ["Inya.ai (No-Code AI Engine)", "WhatsApp Business API", "Agentic AI Logic", "Cloud Database"], 
+    liveDemo: "#", // Add your WhatsApp Bot link or demo video here
+    sourceCode: "#", // Add your Inya.ai workflow export or GitHub link here
+>>>>>>> 66ec86213a89ad1e0135b9b56a5ffbd5874c190d
+    features: [
+      "Bhav-Taal: Live price discovery across local retail shops to find the best deals instantly.",
+      "Saath-Mein-Deal: AI-coordinated group buying that aggregates community demand to unlock wholesale prices.",
+      "Khet-se-Ghar: A direct farm-to-home pre-order system that ensures freshness and reduces food waste.",
+      "Proactive AI Alerts: Personalized notifications for relevant deals and a smart shopping list planner."
+    ]
+},
   {
     title: "Privacy Sentinel - Synthetic Data Generator",
     description: "An AI-powered pipeline that analyzes sensitive visual documents (PDFs, images) and generates a new, functionally identical synthetic dataset. This mirrors the original data's statistical patterns but contains no real PII, making it safe for analysis and model training[cite: 6, 7].",
@@ -387,10 +408,10 @@ export const projectsData = [
     liveDemo: "#", // Add your live demo link here
     sourceCode: "#", // Add your GitHub link here
     features: [
-      "Layout-aware OCR and Named Entity Recognition (NER) for information extraction [cite: 30, 31]",
-      "Differential Privacy integration for mathematical guarantees of privacy [cite: 34]",
-      "Generative Adversarial Network (GAN) learns the data's statistical distribution [cite: 41]",
-      "Outputs high-fidelity, privacy-safe synthetic data for analysis [cite: 20, 45]"
+      "Layout-aware OCR and Named Entity Recognition (NER) for information extraction ",
+      "Differential Privacy integration for mathematical guarantees of privacy",
+      "Generative Adversarial Network (GAN) learns the data's statistical distribution",
+      "Outputs high-fidelity, privacy-safe synthetic data for analysis"
     ]
   },
   {
@@ -400,10 +421,10 @@ export const projectsData = [
     liveDemo: "#", // Add your live demo link here
     sourceCode: "#", // Add your GitHub link here
     features: [
-      "Evidence toolkit to capture screenshots, chat logs, call records, and receipts [cite: 85]",
-      "Smart categorization for different types of cybercrime (e.g., Scam, Harassment) [cite: 87]",
-      "Timestamps and hashes files (SHA256) to ensure evidence integrity [cite: 90]",
-      "Generates a court-acceptable PDF report for easy submission [cite: 92]"
+      "Evidence toolkit to capture screenshots, chat logs, call records, and receipts.",
+      "Smart categorization for different types of cybercrime (e.g., Scam, Harassment).",
+      "Timestamps and hashes files (SHA256) to ensure evidence integrity.",
+      "Generates a court-acceptable PDF report for easy submission."
     ]
   },
   {
@@ -413,10 +434,10 @@ export const projectsData = [
     liveDemo: "#", // Add your live demo link here
     sourceCode: "#", // Add your GitHub link here
     features: [
-      "Real-time AI face shape detection using a device's webcam [cite: 129]",
-      "Personalized routine curation based on the detected facial geometry [cite: 133]",
-      "Showcases curated product bundles to create a seamless path to purchase [cite: 138]",
-      "Built-in social sharing and lead capture to drive marketing and conversion [cite: 148]"
+      "Real-time AI face shape detection using a device's webcam",
+      "Personalized routine curation based on the detected facial geometry",
+      "Showcases curated product bundles to create a seamless path to purchase",
+      "Built-in social sharing and lead capture to drive marketing and conversion"
     ]
   }
 ];
@@ -436,6 +457,12 @@ export const achievementsData = {
       issuer: "Google Essentials",
       date: "2025",
       imageUrl: "/certifications/google-coursera-bits-bytes.png"
+    },
+    {
+      title: "NPTEL Market Analytics",
+      issuer: "IIT Kharagpur",
+      date: "2026",
+      imageUrl: "/certifications/nptel-market-analytics.png"
     },
     {
       title: "Foundation of AIML",
