@@ -262,6 +262,19 @@ export const projectsData = [
     ]
   },
   {
+    title: "To-Do List Website",
+    description: "A clean and simple web-based to-do list application to help users organize their daily tasks efficiently.",
+    techStack: ["React.js", "Local Storage", "CSS3"],
+    liveDemo: " https://dhruvhedaoo2704.github.io/To-Do-TaskFlow/", // Add your live demo link here
+    sourceCode: "https://github.com/DhruvHedaoo2704/To-Do-TaskFlow", // Add your GitHub link here
+    features: [
+      "Add, edit, and delete tasks",
+      "Mark tasks as complete",
+      "Persistent storage using browser's Local Storage",
+      "Filter tasks by all, active, or completed"
+    ]
+  },
+  {
     title: "Data Science Club Website",
     description: "The official website for the university's Data Science Club, featuring events, resources, and membership information.",
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap"],
@@ -356,9 +369,22 @@ export const projectsData = [
     ]
   },
   {
-    title: "To-Do List Website",
-    description: "A clean and simple web-based to-do list application to help users organize their daily tasks efficiently.",
-    techStack: ["React.js", "Local Storage", "CSS3"],
+    title: "Sauda Bot",
+    description: "Please add a description for your Sauda Bot project here. What does it do and what problem does it solve?",
+    techStack: ["Python", "React.js", "MongoDB", "Dialogflow", "Telegram API"], // Example tech stack
+    liveDemo: "#", // Add your live demo link here
+    sourceCode: "#", // Add your GitHub link here
+    features: [
+      "Bhav-Taal: Live price discovery across local retail shops to find the best deals instantly.",
+      "Saath-Mein-Deal: AI-coordinated group buying that aggregates community demand to unlock wholesale prices.",
+      "Khet-se-Ghar: A direct farm-to-home pre-order system that ensures freshness and reduces food waste.",
+      "Proactive AI Alerts: Personalized notifications for relevant deals and a smart shopping list planner."
+    ]
+},
+  {
+    title: "Privacy Sentinel - Synthetic Data Generator",
+    description: "An AI-powered pipeline that analyzes sensitive visual documents (PDFs, images) and generates a new, functionally identical synthetic dataset. This mirrors the original data's statistical patterns but contains no real PII, making it safe for analysis and model training[cite: 6, 7].",
+    techStack: ["Python", "PyTorch", "OpenCV", "Tesseract", "spaCy", "PyDP", "GANs"],
     liveDemo: "#", // Add your live demo link here
     sourceCode: "#", // Add your GitHub link here
     features: [
