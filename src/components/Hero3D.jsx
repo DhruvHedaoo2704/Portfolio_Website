@@ -9,25 +9,25 @@ const slides = [
   {
     id: 'Web',
     title: personalInfo.animatedTitles[0] || 'Full-Stack Developer',
-    tech: skillsData["Web Technologies"] ? skillsData["Web Technologies"].slice(0, 4).map(s => s.name).join(' | ') : 'React.js | Node.js | MongoDB | Express.js',
+    tech: skillsData["Web Technologies"] ? skillsData["Web Technologies"].slice(0, 4).join(' | ') : 'React.js | Node.js | MongoDB | Express.js',
     desc: 'Architecting high-performance scalable web applications with responsive UI and robust backend systems.'
   },
   {
     id: 'Mobile',
     title: personalInfo.animatedTitles[1] || 'Android Developer',
-    tech: skillsData["Mobile Development"] ? skillsData["Mobile Development"].slice(0, 4).map(s => s.name).join(' | ') : 'Java | Kotlin | Android Studio',
+    tech: skillsData["Mobile Development"] ? skillsData["Mobile Development"].slice(0, 4).join(' | ') : 'Java | Kotlin | Android Studio',
     desc: 'Developing native mobile applications with intuitive interfaces and seamless API integration.'
   },
   {
     id: 'AI',
     title: personalInfo.animatedTitles[2] || 'AI & ML Enthusiast',
-    tech: skillsData["AI & ML"] ? skillsData["AI & ML"].slice(0, 4).map(s => s.name).join(' | ') : 'Python | TensorFlow | PyTorch | Machine Learning',
+    tech: skillsData["AI & ML"] ? skillsData["AI & ML"].slice(0, 4).join(' | ') : 'Python | TensorFlow | PyTorch | Machine Learning',
     desc: 'Specializing in predictive modeling, computer vision, and privacy-preserving AI systems.'
   },
   {
     id: 'Software',
     title: personalInfo.animatedTitles[3] || 'Software Engineer',
-    tech: skillsData["Programming Languages"] ? skillsData["Programming Languages"].slice(0, 4).map(s => s.name).join(' | ') : 'C++ | Java | DSA',
+    tech: skillsData["Programming Languages"] ? skillsData["Programming Languages"].slice(0, 4).join(' | ') : 'C++ | Java | DSA',
     desc: 'Solving complex computational problems and building resilience through scalable architecture.'
   }
 ];

@@ -15,7 +15,7 @@ const Dashboard = () => {
   const leadershipRoles = experienceData.filter(exp => exp.type === 'Leadership').length;
   const technicalRoles = experienceData.filter(exp => exp.type === 'Experience').length;
   const totalAchievements = Object.values(achievementsData).reduce((total, category) => total + (Array.isArray(category) ? category.length : 0), 0);
-  const allSkills = Array.from(new Set(Object.values(skillsData).flatMap(category => category.map(skill => skill.name))));
+  const allSkills = Array.from(new Set(Object.values(skillsData).flatMap(category => category.map(skill => skill))));
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
