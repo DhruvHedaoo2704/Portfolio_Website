@@ -86,35 +86,6 @@ export const Hero3D = () => {
       {/* The Dynamic 3D Background */}
       <BackgroundEngine currentZone={slides[index].id} />
 
-      {/* Animated Glow Orbs */}
-      <motion.div
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.6, 0.9, 0.6]
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: 'easeInOut'
-        }}
-        className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full transition-colors duration-1000 ${getBlurStyles(index)} transition-colors duration-1000`}
-        style={{ filter: 'blur(10px)' }}
-      />
-      <motion.div
-        animate={{
-          scale: [1.1, 1, 1.1],
-          opacity: [0.6, 0.9, 0.6]
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 0.5
-        }}
-        className={`absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full transition-colors duration-1000 ${getBlurStyles(index)} transition-colors duration-1000`}
-        style={{ filter: 'blur(10px)' }}
-      />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 pt-20 pb-16">
 
         {/* Left Side Content */}
@@ -135,7 +106,7 @@ export const Hero3D = () => {
             I'm {personalInfo.name}
           </motion.h2>
 
-          <div className="relative bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl p-8 rounded-2xl border border-slate-200 dark:border-slate-700/50 w-full shadow-2xl">
+          <div className="relative bg-white/80 dark:bg-slate-900/60 p-8 rounded-2xl border border-slate-200 dark:border-slate-700/50 w-full shadow-2xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={slides[index].id + index}
@@ -179,7 +150,7 @@ export const Hero3D = () => {
             <a
               href="/certifications/resume.pdf"
               download
-              className="group inline-flex items-center px-8 py-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md text-slate-800 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 font-semibold rounded-full transition-all duration-300 hover:scale-105 border border-slate-300 dark:border-slate-600 shadow-xl"
+              className="group inline-flex items-center px-8 py-4 bg-white/90 dark:bg-slate-800/90 text-slate-800 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 font-semibold rounded-full transition-all duration-300 hover:scale-105 border border-slate-300 dark:border-slate-600 shadow-xl"
             >
               Download Resume
               <Download size={20} className="ml-2 group-hover:translate-y-1 transition-transform" />
@@ -187,10 +158,8 @@ export const Hero3D = () => {
           </motion.div>
         </div>
 
-        {/* Right Side: Profile Image with Glow */}
+        {/* Right Side: Profile Image */}
         <div className="relative mt-12 lg:mt-0 flex justify-center w-full lg:w-2/5">
-          <div className={`absolute inset-0 rounded-[6rem] blur-3xl transition-colors duration-1000 ${getBlurStyles(index)}`} />
-
           <div className={`relative w-64 h-[22rem] md:w-80 md:h-[28rem] rounded-[6rem] flex items-center justify-center border-4 transition-all duration-1000 overflow-hidden ${getGlowStyles(index)}`}>
             <img
               src="/certifications/profile1.png"

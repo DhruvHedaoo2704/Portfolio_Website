@@ -31,7 +31,7 @@ const NetworkBackground = () => {
       {nodes.map((node) => (
         <motion.div
           key={node.id}
-          className={`absolute rounded-full ${node.color} opacity-10 dark:opacity-[0.05] blur-2xl`}
+          className={`absolute rounded-full ${node.color} opacity-10 dark:opacity-[0.05]`}
           style={{
             width: node.size * 2,
             height: node.size * 2,

@@ -60,7 +60,7 @@ const HeroSlideshow = () => {
       </button>
 
       {/* Slideshow Card */}
-      <div className="w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 p-8 md:p-10 overflow-hidden relative min-h-[300px] flex flex-col justify-center">
+      <div className="w-full bg-white/80 dark:bg-slate-900/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 p-8 md:p-10 overflow-hidden relative min-h-[300px] flex flex-col justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
