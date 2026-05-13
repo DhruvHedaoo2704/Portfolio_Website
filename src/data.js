@@ -262,6 +262,19 @@ export const projectsData = [
     ]
   },
   {
+    title: "Mess Management System",
+    description: "A comprehensive system to manage daily mess operations, including meal planning, attendance tracking, and feedback collection.",
+    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "EJS", "Bootstrap"],
+    liveDemo: "https://dhruvhedaoo2704.github.io/MessMind-AI/", // Add your live demo link here
+    sourceCode: "https://github.com/DhruvHedaoo2704/MessMind-AI ", // Add your GitHub link here
+    features: [
+      "Daily and weekly meal menu display",
+      "Digital attendance for students",
+      "Feedback and rating system for meals",
+      "Admin dashboard for analytics and management"
+    ]
+  },
+  {
     title: "To-Do List Website",
     description: "A clean and simple web-based to-do list application to help users organize their daily tasks efficiently.",
     techStack: ["React.js", "Local Storage", "CSS3"],
@@ -337,19 +350,6 @@ export const projectsData = [
       "Computer opponent with randomized choices",
       "Instant feedback on whether you win, lose, or draw",
       "A running scoreboard to track your game session"
-    ]
-  },
-  {
-    title: "Mess Management System",
-    description: "A comprehensive system to manage daily mess operations, including meal planning, attendance tracking, and feedback collection.",
-    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "EJS", "Bootstrap"],
-    liveDemo: "https://dhruvhedaoo2704.github.io/MessMind-AI/", // Add your live demo link here
-    sourceCode: "https://github.com/DhruvHedaoo2704/MessMind-AI ", // Add your GitHub link here
-    features: [
-      "Daily and weekly meal menu display",
-      "Digital attendance for students",
-      "Feedback and rating system for meals",
-      "Admin dashboard for analytics and management"
     ]
   },
 ////////////////////////////////////////////////////////////////////
