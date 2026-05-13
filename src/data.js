@@ -339,15 +339,12 @@ export const projectsData = [
       "A running scoreboard to track your game session"
     ]
   },
-////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////
-
   {
     title: "Mess Management System",
     description: "A comprehensive system to manage daily mess operations, including meal planning, attendance tracking, and feedback collection.",
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "EJS", "Bootstrap"],
-    liveDemo: "#", // Add your live demo link here
-    sourceCode: "#", // Add your GitHub link here
+    liveDemo: "https://dhruvhedaoo2704.github.io/MessMind-AI/", // Add your live demo link here
+    sourceCode: "https://github.com/DhruvHedaoo2704/MessMind-AI ", // Add your GitHub link here
     features: [
       "Daily and weekly meal menu display",
       "Digital attendance for students",
@@ -355,6 +352,10 @@ export const projectsData = [
       "Admin dashboard for analytics and management"
     ]
   },
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+  
   {
     title: "Hostel Management System",
     description: "An application to digitize and simplify hostel administration, from room allocation to complaint resolution.",
@@ -392,32 +393,6 @@ export const projectsData = [
       "Mark tasks as complete",
       "Persistent storage using browser's Local Storage",
       "Filter tasks by all, active, or completed"
-    ]
-  },
-  {
-    title: "SaudaBot",
-    description: "An Agentic AI personal shopping assistant on WhatsApp that bridges the gap in local commerce for towns like Neemuch. It empowers consumers to find the best local prices, join community group-buying deals, and purchase fresh produce directly from farmers, while giving local sellers a digital edge.",
-    techStack: ["Inya.ai (No-Code AI Engine)", "WhatsApp Business API", "Agentic AI Logic", "Cloud Database"], 
-    liveDemo: "#", // Add your WhatsApp Bot link or demo video here
-    sourceCode: "#", // Add your Inya.ai workflow export or GitHub link here
-    features: [
-      "Bhav-Taal: Live price discovery across local retail shops to find the best deals instantly.",
-      "Saath-Mein-Deal: AI-coordinated group buying that aggregates community demand to unlock wholesale prices.",
-      "Khet-se-Ghar: A direct farm-to-home pre-order system that ensures freshness and reduces food waste.",
-      "Proactive AI Alerts: Personalized notifications for relevant deals and a smart shopping list planner."
-    ]
-},
-  {
-    title: "Privacy Sentinel - Synthetic Data Generator",
-    description: "An AI-powered pipeline that analyzes sensitive visual documents (PDFs, images) and generates a new, functionally identical synthetic dataset. This mirrors the original data's statistical patterns but contains no real PII, making it safe for analysis and model training[cite: 6, 7].",
-    techStack: ["Python", "PyTorch", "OpenCV", "Tesseract", "spaCy", "PyDP", "GANs"],
-    liveDemo: "#", // Add your live demo link here
-    sourceCode: "#", // Add your GitHub link here
-    features: [
-      "Layout-aware OCR and Named Entity Recognition (NER) for information extraction ",
-      "Differential Privacy integration for mathematical guarantees of privacy",
-      "Generative Adversarial Network (GAN) learns the data's statistical distribution",
-      "Outputs high-fidelity, privacy-safe synthetic data for analysis"
     ]
   },
   {
