@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Users, Calendar, MapPin, ChevronRight } from 'lucide-react';
-import { experienceData } from '../data';
+import { Briefcase, Users, Calendar, MapPin, ChevronRight, Code2, Database, Cpu } from 'lucide-react';
+import { experienceData, skillsData } from '../data';
 
 const Experience = () => {
   return (
@@ -37,14 +37,14 @@ const Experience = () => {
               className="relative mb-12 md:ml-16"
             >
               {/* Timeline Dot */}
-              <div className="absolute left-[-3.75rem] top-6 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-slate-100 dark:border-gray-900 flex items-center justify-center hidden md:flex">
+              <div className="absolute left-[-3.75rem] top-6 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white dark:border-slate-900 flex items-center justify-center hidden md:flex shadow-lg">
                 {experience.type === 'Experience' ? 
                   <Briefcase size={16} className="text-white" /> : 
                   <Users size={16} className="text-white" />
                 }
               </div>
 
-              <div className="bg-white dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:bg-white/10 transition-all duration-300">
+              <div className="bg-white dark:bg-slate-900/40 rounded-2xl p-8 border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:bg-slate-800/50 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
                     <div className="flex items-center mb-2">
@@ -84,6 +84,48 @@ const Experience = () => {
                     ))}
                   </ul>
                 </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Skills Section */}
+      <div className="max-w-4xl mx-auto mt-20">
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Skills & Technologies</h2>
+          <p className="text-xl text-slate-600 dark:text-gray-400">Tools and technologies I work with</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
+            <motion.div
+              key={category}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 + categoryIndex * 0.1 }}
+              className="bg-white dark:bg-slate-900/40 rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:bg-slate-800/50 transition-all duration-300"
+            >
+              <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-4 flex items-center">
+                {categoryIndex % 3 === 0 && <Code2 size={20} className="mr-2 text-blue-600 dark:text-blue-400" />}
+                {categoryIndex % 3 === 1 && <Database size={20} className="mr-2 text-purple-600 dark:text-purple-400" />}
+                {categoryIndex % 3 === 2 && <Cpu size={20} className="mr-2 text-emerald-600 dark:text-emerald-400" />}
+                {category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill, skillIndex) => (
+                  <span
+                    key={skillIndex}
+                    className="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-600/20 dark:to-purple-600/20 text-slate-700 dark:text-slate-200 text-sm font-medium rounded-full border border-blue-200 dark:border-blue-400/30 transition-all hover:border-blue-400 dark:hover:border-blue-300"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </motion.div>
           ))}

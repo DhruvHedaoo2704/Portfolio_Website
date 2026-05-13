@@ -89,13 +89,14 @@ const Dashboard = () => {
                 {/* Skills */}
                 <div className="flex flex-wrap gap-3">
                   {skills.map((skill, skillIdx) => (
-                    <motion.span
+                    <motion.span 
+                      whileHover={{ y: -4 }} whileTap={{ scale: 0.95 }}
                       key={skillIdx}
                       initial={{ scale: 0.8, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
-                      transition={{ delay: skillIdx * 0.05 }}
+                      transition={{ delay: skillIdx * 0.05, type: "spring", stiffness: 300 }}
                       viewport={{ once: true }}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-600/20 text-blue-800 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-400/30"
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-600/20 text-blue-800 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-400/30 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:text-white hover:border-transparent hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-110 transition-all duration-300 cursor-default"
                     >
                       {typeof skill === "string" ? skill : skill.name}
                     </motion.span>
@@ -118,7 +119,7 @@ const Dashboard = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-extrabold bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 bg-clip-text text-transparent mb-4">
                 Work Experience
               </h2>
               <p className="text-slate-600 dark:text-gray-400 mb-8 leading-relaxed">
@@ -126,9 +127,22 @@ const Dashboard = () => {
               </p>
 
               {/* Career at a Glance */}
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 dark:from-slate-800 dark:to-slate-900 p-8 rounded-xl border border-slate-700 dark:border-slate-700">
-                <h3 className="text-xl font-bold text-white mb-6">Career at a Glance</h3>
+              <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg p-8 rounded-3xl border border-blue-100 dark:border-slate-700 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.35)]">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Career at a Glance</h3>
                 <div className="space-y-4">
+                  
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 bg-amber-500/20 rounded-lg">
+                      <svg className="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-slate-900 dark:text-white">8.8</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-400">CGPA</p>
+                    </div>
+                  </div>
+                  
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-blue-500/20 rounded-lg">
                       <svg className="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
@@ -136,8 +150,8 @@ const Dashboard = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">4+</p>
-                      <p className="text-sm text-slate-400">Years Exp.</p>
+                      <p className="text-2xl font-bold text-slate-900 dark:text-white">4+</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-400">Years Exp.</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -147,8 +161,8 @@ const Dashboard = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">{totalExperiences}+</p>
-                      <p className="text-sm text-slate-400">Projects</p>
+                      <p className="text-2xl font-bold text-slate-900 dark:text-white">{totalExperiences}+</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-400">Projects</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -159,23 +173,44 @@ const Dashboard = () => {
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-white">10+</p>
-                      <p className="text-sm text-slate-400">Technologies</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="p-3 bg-amber-500/20 rounded-lg">
-                      <svg className="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-white">8.8</p>
-                      <p className="text-sm text-slate-400">CGPA</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-400">Technologies</p>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-sm text-slate-400 italic mt-6 pt-6 border-t border-slate-700">
+                {/* Top Skills */}
+                  <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700">
+
+                    <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-3 flex items-center gap-3">
+                      <span className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></span>
+                      Tools & Technologies
+                    </h3>
+
+                    <div className="flex flex-wrap gap-3">
+                      {[
+                        "React.js",
+                        "Next.js",
+                        "Node.js",
+                        "Express.js",
+                        "JavaScript",
+                        "Python",
+                        "Java",
+                        "C++",
+                        "TensorFlow",
+                        "PyTorch",
+                        "MongoDB",
+                        "PostgreSQL",
+                        "AWS",
+                        "GitHub",
+                        "Tailwind CSS"
+                      ].map((skill, idx) => (
+                        <span key={idx} className="px-3 py-1.5 rounded-full text-sm font-medium border border-blue-400/40 bg-blue-500/10 text-blue-700 dark:text-blue-300 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:text-white hover:scale-105 transition-all duration-300 cursor-default">{skill}</span>
+                      ))}
+                    </div>
+
+                  </div>
+
+                <p className="text-sm text-slate-600 dark:text-slate-400 italic mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
                   "Building resilience through code, and scalability through architecture."
                 </p>
               </div>
@@ -185,7 +220,7 @@ const Dashboard = () => {
             <div className="lg:col-span-2">
               <div className="relative">
                 {/* Timeline Line */}
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-600 hidden lg:block"></div>
+                <div className="absolute left-5 top-0 h-full w-[3px] rounded-full bg-gradient-to-b from-blue-500 via-cyan-400 to-indigo-600 hidden lg:block opacity-80"></div>
 
                 {/* Experience Cards */}
                 <motion.div
@@ -193,7 +228,7 @@ const Dashboard = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="space-y-6 lg:pl-8"
+                  className="space-y-6 lg:pl-16"
                 >
                   {experienceData.slice(0, visibleCount).map((exp, idx) => (
                     <motion.div
@@ -203,25 +238,25 @@ const Dashboard = () => {
                       onMouseLeave={() => setExpandedExperience(null)}
                     >
                       {/* Timeline Dot */}
-                      <div className="hidden lg:flex absolute -left-5 mt-6 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 border-4 border-slate-50 dark:border-slate-900 items-center justify-center">
+                      <div className="hidden lg:flex absolute left-0 mt-6 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 via-cyan-500 to-indigo-600 border-4 border-white dark:border-slate-900 items-center justify-center shadow-lg shadow-blue-500/30 ">
                         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M10.5 1.5H3.75A2.25 2.25 0 001.5 3.75v12.5A2.25 2.25 0 003.75 18.5h12.5a2.25 2.25 0 002.25-2.25V9.5" stroke="currentColor" strokeWidth="1.5" fill="none"/>
                         </svg>
                       </div>
 
                       <div
-                        className="w-full bg-gradient-to-br from-slate-800 to-slate-900 dark:from-slate-800 dark:to-slate-900 border border-slate-700 dark:border-slate-700 rounded-xl p-6 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 group cursor-default"
+                        className="w-full bg-white/90  dark:bg-slate-900/90 backdrop-blur-lg border border-slate-200 dark:border-slate-700 rounded-3xl p-6 hover:border-cyan-400 hover:-translate-y-1 transition-all duration-300 group cursor-default shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.35)] hover:shadow-cyan-500/20"
                       >
                         <div className="flex items-start justify-between mb-2">
                           <div className="flex-1">
-                            <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{exp.title}</h3>
-                            <p className="text-slate-400 font-medium">{exp.company}</p>
+                            <h3 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">{exp.title}</h3>
+                            <p className="text-slate-600 dark:text-slate-400 font-medium">{exp.company}</p>
                           </div>
-                          <span className="text-blue-400 font-semibold whitespace-nowrap ml-4">{exp.duration}</span>
+                          <span className="text-blue-600 dark:text-cyan-400 font-semibold whitespace-nowrap ml-4">{exp.duration}</span>
                         </div>
 
                         {expandedExperience !== idx && exp.description && (
-                          <p className="text-sm text-slate-400 mt-2 line-clamp-2">{exp.description}</p>
+                          <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-2">{exp.description}</p>
                         )}
 
                         <motion.div
@@ -231,14 +266,14 @@ const Dashboard = () => {
                           className="overflow-hidden"
                         >
                           {expandedExperience === idx && (
-                            <div className="mt-4 pt-4 border-t border-slate-700">
-                              <p className="text-slate-300 mb-4">{exp.description}</p>
+                            <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+                              <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">{exp.description}</p>
                               <div>
-                                <h4 className="text-sm font-semibold text-white mb-3">Key Achievements:</h4>
+                                <h4 className="text-sm font-semibold text-slate-800 dark:text-white mb-3">Key Achievements:</h4>
                                 <ul className="space-y-2">
                                   {exp.achievements.map((achievement, aidx) => (
-                                    <li key={aidx} className="flex items-start text-sm text-slate-400">
-                                      <span className="text-blue-400 mr-2 flex-shrink-0">•</span>
+                                    <li key={aidx} className="flex items-start text-sm text-slate-600 dark:text-slate-400">
+                                      <span className=" text-blue-500 dark:text-cyan-400 mr-2 flex-shrink-0">•</span>
                                       <span>{achievement}</span>
                                     </li>
                                   ))}
@@ -279,7 +314,7 @@ const Dashboard = () => {
                   >
                     <button
                       onClick={() => setVisibleCount(5)}
-                      className="text-slate-400 hover:text-slate-300 font-medium text-sm transition-colors"
+                      className="text-slate-600 dark:text-slate-400 hover:text-slate-300 font-medium text-sm transition-colors"
                     >
                       Show Less
                     </button>

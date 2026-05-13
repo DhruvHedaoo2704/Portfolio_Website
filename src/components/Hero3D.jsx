@@ -56,13 +56,13 @@ const getBlurStyles = (index) => {
 const getBackgroundGradient = (index) => {
   const zone = slides[index].id;
   if (zone === 'Web') {
-    return 'bg-gradient-to-br from-cyan-900/30 via-slate-900 to-slate-950';
+    return 'bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/30 dark:via-slate-900 dark:to-slate-950';
   } else if (zone === 'Mobile') {
-    return 'bg-gradient-to-br from-emerald-900/30 via-slate-900 to-slate-950';
+    return 'bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:via-slate-900 dark:to-slate-950';
   } else if (zone === 'AI') {
-    return 'bg-gradient-to-br from-purple-900/30 via-slate-900 to-slate-950';
+    return 'bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:via-slate-900 dark:to-slate-950';
   } else {
-    return 'bg-gradient-to-br from-amber-900/30 via-slate-900 to-slate-950';
+    return 'bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/30 dark:via-slate-900 dark:to-slate-950';
   }
 };
 
@@ -84,7 +84,9 @@ export const Hero3D = () => {
       className={`relative w-full min-h-screen flex flex-col justify-center overflow-hidden ${getBackgroundGradient(index)} transition-all duration-1000`}
     >
       {/* The Dynamic 3D Background */}
-      <BackgroundEngine currentZone={slides[index].id} />
+      <div className="absolute inset-0 opacity-60 dark:opacity-100">
+        <BackgroundEngine currentZone={slides[index].id} />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 pt-20 pb-16">
 
