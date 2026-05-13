@@ -234,6 +234,11 @@ const Dashboard = () => {
                     <motion.div
                       key={idx}
                       variants={itemVariants}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      // Calculate dynamic delay to keep the stagger effect for new batches
+                      transition={{ duration: 0.5, delay: (idx % 5) * 0.1 }}
                       onMouseEnter={() => setExpandedExperience(idx)}
                       onMouseLeave={() => setExpandedExperience(null)}
                     >
@@ -244,9 +249,7 @@ const Dashboard = () => {
                         </svg>
                       </div>
 
-                      <div
-                        className="w-full bg-white/90  dark:bg-slate-900/90 backdrop-blur-lg border border-slate-200 dark:border-slate-700 rounded-3xl p-6 hover:border-cyan-400 hover:-translate-y-1 transition-all duration-300 group cursor-default shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.35)] hover:shadow-cyan-500/20"
-                      >
+                      <div className="w-full bg-white/90  dark:bg-slate-900/90 backdrop-blur-lg border border-slate-200 dark:border-slate-700 rounded-3xl p-6 hover:border-cyan-400 hover:-translate-y-1 transition-all duration-300 group cursor-default shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.35)] hover:shadow-cyan-500/20">
                         <div className="flex items-start justify-between mb-2">
                           <div className="flex-1">
                             <h3 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">{exp.title}</h3>
