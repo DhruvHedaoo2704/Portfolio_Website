@@ -164,7 +164,7 @@ export const Hero3D = () => {
         <div className="relative mt-12 lg:mt-0 flex justify-center w-full lg:w-2/5">
           <div className={`relative w-64 h-[22rem] md:w-80 md:h-[28rem] rounded-[6rem] flex items-center justify-center border-4 transition-all duration-1000 overflow-hidden ${getGlowStyles(index)}`}>
             <img
-              src="/certifications/profile1.png"
+              src="/certifications/profile.png"
               alt={personalInfo.name}
               className="w-full h-full object-cover relative z-0"
             />
